@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   int n,original,c=0,r,s=0;
+   printf("Enter a number:");
+   scanf("%d",&n);
+   original=n;
+   while(n>0)
+   {
+      c=c+1;
+      n=n/10;
+   }
+   n=original;
+   while(n>0)
+   {
+      r=n%10;
+      s=s+pow(r,c);
+      n=n/10;
+   }
+   if(s==original)
+   {
+      printf("%d is Armstrong Number",original);
+   }
+   else
+   {
+      printf("%d is not Armstrong Number",original);
+   }
+   printf("\nFinished");
+   return 0;
+}
