@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+   int n,original,s=0,r;
+   printf("Enter a number:");
+   scanf("%d",&n);
+   original=n;
+   while(n>0)
+   {
+      r=n%10;
+      if(r%2==0)
+      {
+         s=s+r;
+      }
+      n=n/10;
+   }
+   printf("Sum of even digits present in %d is %d",original,s);
+   printf("\nFinished");
+   return 0;
+}
