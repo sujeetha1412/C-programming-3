@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+   int n,original,c=0,s=0,r;
+   printf("Enter a number:");
+   scanf("%d",&n);
+   original=n;
+   while(n>0)
+   {
+      r=n%10;
+      c++;
+      if(c%2!=0)
+      {
+         s=s+r;
+      }
+      n=n/10;
+   }
+   printf("Sum of odd position present in %d is %d",original,s);
+   printf("\nFinished");
+   return 0;
+}
